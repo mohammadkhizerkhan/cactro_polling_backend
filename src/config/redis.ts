@@ -1,8 +1,17 @@
 import { createClient } from 'redis';
 import { config } from './config';
 
-const redisUrl = `redis://${config.redisUser}:${config.redisPassword}@${config.redisHost}:${config.redisPort}`;
-const redisClient = createClient({ url: redisUrl });
+// const redisUrl = `redis://${config.redisUser}:${config.redisPassword}@${config.redisHost}:${config.redisPort}`;
+// const redisClient = createClient({ url: redisUrl });
+
+const redisClient = createClient({
+    username: config.redisUser,
+    password: config.redisPassword,
+    socket: {
+        host: config.redisHost,
+        port: Number(config.redisPort)
+    }
+});
 
 (async () => {
     try {
