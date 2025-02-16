@@ -1,1 +1,1 @@
-{"root":["./src/app.ts","./src/server.ts","./src/config/config.ts","./src/config/redis.ts","./src/routes/cache.ts","./src/service/cache.ts"],"version":"5.7.3"}
+{"root":["./src/app.ts","./src/server.ts","./src/config/config.ts","./src/config/mongodb.ts","./src/models/question.ts","./src/models/user.ts","./src/routes/question.ts","./src/routes/user.ts","./src/service/question.ts","./src/service/user.ts"],"version":"5.7.3"}
