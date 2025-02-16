@@ -33,6 +33,10 @@ class QuestionService {
         model: 'User'
       }).exec();
   }
+
+  static async getAllQuestions(){
+   return await Question.find().select('_id question');
+  }
 }
 
 export default QuestionService;

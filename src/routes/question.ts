@@ -36,4 +36,14 @@ router.get('/:questionId', async (req, res,next) => {
   }
 });
 
+router.get('', async (req, res,next) => {
+  try {
+    const polls = await QuestionService.getAllQuestions();
+    res.status(200).json(polls);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 export default router;
